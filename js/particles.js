@@ -8,7 +8,7 @@
 var canvasDiv = document.getElementById('particle-canvas');
 var options = {
     particleColor: '#888',
-    background: 'https://github.com/iBelow/chrome-greeting/blob/9686b0e87d9f3d0801753e1f5c136e0dd4dfbfc6/img/wal.jpg',
+    background: '#1e1f21',
     interactive: true,
     speed: 'medium',
     density: 'high'
