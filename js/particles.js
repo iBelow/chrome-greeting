@@ -6,9 +6,28 @@
 // Initialisation
 
 var canvasDiv = document.getElementById('particle-canvas');
+
+let button = document.getElementById('themeButton');
+let darkColor = "#1e1f21";
+let whiteColor = "#f5f5f5";
+let color = "#1e1f21";
+let body = document.querySelector("body");
+
+
+button.addEventListener("click", ()=>{
+    if(body.classList.contains("darktheme")){
+        color = darkColor;
+    }
+    else{
+        color = whiteColor;
+    }
+    var particleCanvas = new ParticleNetwork(canvasDiv, options);
+    console.log(color);
+});
+
 var options = {
     particleColor: '#888',
-    background: '#1e1f21',
+    background: color,
     interactive: true,
     speed: 'medium',
     density: 'high'

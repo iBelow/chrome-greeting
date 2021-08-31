@@ -19,7 +19,9 @@ const disableDark = () => {
 if (darkTheme === 'enabled') {
   enableDark();
 } else {
-  disableDark();
+  enableDark();
+
+  // disableDark();
 }
 
 themeToggle.addEventListener('click', () => {
@@ -27,7 +29,9 @@ themeToggle.addEventListener('click', () => {
   if (darkTheme !== 'enabled') {
     enableDark();
   } else {
-    disableDark();
+    enableDark();
+    //disabled now
+    // disableDark();
   }
 });
 
