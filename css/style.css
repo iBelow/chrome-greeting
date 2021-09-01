@@ -23,12 +23,9 @@
   /* Image background  */
   --imgcol: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7));
   /* Filter color */
-
   --mfg: #fd7418cb;
   /*minutes color*/
 }
-
-
 
 @media only screen and (max-width: 68.75em) {
   :root {
@@ -51,7 +48,6 @@
   /* Foreground color */
   --imgcol: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
   /* Filter color */
-
   --mfg: #fd7418cb;
   /*minutes color*/
 }
@@ -125,7 +121,6 @@ body {
   grid-gap: 30px;
   padding: 20px;
 }
-
 
 @media only screen and (max-width: 68.75em) {
   .container {
@@ -204,6 +199,7 @@ body {
   font-weight: bolder;
   color: var(--mfg);
 }
+
 #hour, #separator {
   font-size: var(--fsg);
   font-weight: bolder;
@@ -374,6 +370,12 @@ body {
 }
 
 .qlist__link:hover {
-  background-color: var(--accent);
+  background-color: var(--bg);
   color: var(--fg);
+}
+
+
+.qlist:hover {
+  background-color:  var(--accent);
+  backdrop-filter: blur(5px);
 }
