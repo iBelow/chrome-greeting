@@ -29,9 +29,8 @@ function setPosition(position) {
 
 // Get the Weather data
 function getWeather(latitude, longitude) {
-  let api = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${key}`;
+  let api = `https://api.openweathermap.org/data/2.5/weather?lang=ru&lat=${latitude}&lon=${longitude}&appid=${key}`;
 
-  console.log(api);
 
   fetch(api)
     .then(function (response) {
@@ -42,13 +41,21 @@ function getWeather(latitude, longitude) {
       let celsius = Math.floor(data.main.temp - KELVIN);
       weather.temperature.value =
         tempUnit == 'C' ? celsius : (celsius * 9) / 5 + 32;
-      weather.description = data.weather[0].description;
+      weather.description = ucFirst(data.weather[0].description);
       weather.iconId = data.weather[0].icon;
     })
     .then(function () {
       displayWeather();
     });
 }
+
+function ucFirst(str) {
+  if (!str) return str;
+
+  return str[0].toUpperCase() + str.slice(1);
+}
+
+
 
 // Display Weather info
 function displayWeather() {
