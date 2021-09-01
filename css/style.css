@@ -61,11 +61,7 @@
   transition: 0.2s ease-in-out;
 }
 
-.content{
-  width: auto;
-  height: 100vh;
-  z-index: 2;
-}
+
 .main {
   max-width: 1200px;
   width: 100%;
@@ -76,7 +72,7 @@
 }
 
 .main>* {
-  z-index: 3;
+  z-index: 2;
 }
 
 body {
@@ -99,6 +95,8 @@ body {
 }
 
 #themeButton {
+display: none;
+
   position: absolute;
   margin: 2em 2em 0 0;
   right: 0;
@@ -190,7 +188,12 @@ body {
 
 @media only screen and (max-width: 68.75em) {
   .sblock {
-    display: none;
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin-bottom: 75px;
+
   }
 }
 
@@ -270,6 +273,7 @@ body {
 
 @media only screen and (max-width: 68.75em) {
   .qlink {
+    display: none;
     grid-row: 3 / span 2;
     grid-column: 1 / span 4;
     grid-gap: 18px;
@@ -278,6 +282,7 @@ body {
     margin-bottom: 20px;
     margin-top: 20px;
   }
+
 }
 
 .qlink__icon {
