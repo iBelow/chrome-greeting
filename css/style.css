@@ -191,9 +191,8 @@ display: none;
     display: block;
     position: fixed;
     bottom: 0;
-    left: 0;
     margin-bottom: 75px;
-
+    align-items: center;
   }
 }
 
